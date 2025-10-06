@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="nav" class="navbar">
+      <div class="logo-container">
+        <img id="logo" src="/assets/logo.png" alt="Company Logo" class="logo" />
+      </div>
+
+      <!-- Hamburger icon for mobile -->
+      <div class="menu-icon" id="menu-icon">☰</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <button class="quote-button">Get A Quote</button>
+    </nav>
+    <!-- Sidebar (mobile only) -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <img src="/assets/logo.png" alt="Company Logo" />
+        </div>
+        <span class="close-icon" id="close-icon">✕</span>
+      </div>
+
+      <ul class="sidebar-links">
+        <li>
+          <a href="#home"><i class="fa-solid fa-house icon"></i> Home</a>
+        </li>
+        <li>
+          <a href="#about"><i class="fa-solid fa-info icon-1"></i> About Us</a>
+        </li>
+        <li>
+          <a href="#services"
+            ><i class="fa-solid fa-gears icon"></i> Our Services</a
+          >
+        </li>
+        <li>
+          <a href="#pricing"><i class="fa-solid fa-tag icon-2"></i>Pricing</a>
+        </li>
+        <li>
+          <a href="#faq"><i class="fa-solid fa-question icon-2"></i>FAQ</a>
+        </li>
+      </ul>
+
+      <button class="contact-button">CONTACT US</button>
+    </div>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+          Your Resume
+          <span class="pink-text">Deserves A Yes</span> Let’s
+          <span>Make it happen</span>
+          <img class="line-image" src="/assets/line.png" alt="line" />
+        </h1>
+        <p>
+          If your resume isn’t getting responses, it’s time for an upgrade. Get
+          an ATS-optimized resume crafted by HR experts to help you land more
+          interviews. Our resumes are designed to get your foot in the door and
+          place your name at the top of the shortlist.
+        </p>
+        <div class="btns">
+          <a href="#" class="btn btn-outline">RESUME PAKAGES</a>
+          <a href="#" class="btn btn-primary">CONTACT US</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="outer-circle">
+          <div class="inner-circle"></div>
+        </div>
+        <img src="/assets/girls.png" alt="Girl" class="girl" />
+        <div class="rating-box">
+          <span class="rating-number">4.9</span>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <div class="rating-text">Instructor Rating</div>
+          </div>
+        </div>
+        <div class="resume-card">
+          <div class="icon">
+            <img src="/assets/mask.png" alt="" />
+          </div>
+          <div class="text-1">
+            <h2>260+</h2>
+            <p>Online Resume</p>
+            <p>Created</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-2">
+      <div class="tag">What You Get</div>
+      <h2 class="h2">
+        You’re Not Just <span>Another Applicant</span> And Your Resume Shouldn’t
+        Look Like One
+      </h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="/assets/cart1.png" alt="Resume" />
+          <h3>A Resume Format That Gets You Interviews</h3>
+          <p>
+            Get a professionally written, keyword-optimized resume that lands in
+            recruiter inboxes.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="/assets/cart2.png" alt="Cover Letter" />
+          <h3>A Cover Letter Style That Stands Out Strong</h3>
+          <p>
+            Stand out with a cover letter that speaks directly to the role and
+            reflects your strengths.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="/assets/cart3.png" alt="LinkedIn" />
+          <h3>A LinkedIn Profile That Works For You</h3>
+          <p>
+            Attract the right eyes, start conversations, and show up in
+            recruiter searches.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="/assets/cart1.png" alt="Interview" />
+          <h3>An Interview Strategy That Builds Confidence</h3>
+          <p>
+            Interview preparation with real HR professionals so you speak
+            clearly and confidently.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const sidebar = document.getElementById("sidebar");
+      const closeIcon = document.getElementById("close-icon");
+      const logo = document.getElementById("logo");
+      const overlay = document.getElementById("overlay");
+      const nav = document.getElementById("nav");
+      menuIcon.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        logo.style.display = "none";
+        overlay.classList.add("active");
+        nav.style.marginTop='-70px'
+      });
+
+      closeIcon.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        logo.style.display = "block";
+        overlay.classList.remove("active");
+        nav.style.marginTop = "0";
+      });
+      overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        nav.style.marginTop ="0"
+      });
+    </script>
+  </body>
+</html>
