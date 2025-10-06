@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- ===== NAVBAR ===== -->
     <nav id="nav" class="navbar">
       <div class="logo-container">
         <img id="logo" src="/assets/logo.png" alt="Company Logo" class="logo" />
       </div>
 
-      <!-- Hamburger icon for mobile -->
+      <!-- Hamburger for mobile -->
       <div class="menu-icon" id="menu-icon">☰</div>
 
       <ul class="nav-links">
@@ -29,7 +34,8 @@
 
       <button class="quote-button">Get A Quote</button>
     </nav>
-    <!-- Sidebar (mobile only) -->
+
+    <!-- ===== SIDEBAR (mobile) ===== -->
     <div class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-logo">
@@ -39,28 +45,17 @@
       </div>
 
       <ul class="sidebar-links">
-        <li>
-          <a href="#home"><i class="fa-solid fa-house icon"></i> Home</a>
-        </li>
-        <li>
-          <a href="#about"><i class="fa-solid fa-info icon-1"></i> About Us</a>
-        </li>
-        <li>
-          <a href="#services"
-            ><i class="fa-solid fa-gears icon"></i> Our Services</a
-          >
-        </li>
-        <li>
-          <a href="#pricing"><i class="fa-solid fa-tag icon-2"></i>Pricing</a>
-        </li>
-        <li>
-          <a href="#faq"><i class="fa-solid fa-question icon-2"></i>FAQ</a>
-        </li>
+        <li><a href="#home"><i class="fa-solid fa-house icon"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-info icon-1"></i> About Us</a></li>
+        <li><a href="#services"><i class="fa-solid fa-gears icon"></i> Our Services</a></li>
+        <li><a href="#pricing"><i class="fa-solid fa-tag icon-2"></i>Pricing</a></li>
+        <li><a href="#faq"><i class="fa-solid fa-question icon-2"></i>FAQ</a></li>
       </ul>
 
       <button class="contact-button">CONTACT US</button>
     </div>
 
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
       <div class="hero-text">
         <h1>
@@ -86,6 +81,7 @@
           <div class="inner-circle"></div>
         </div>
         <img src="/assets/girls.png" alt="Girl" class="girl" />
+
         <div class="rating-box">
           <span class="rating-number">4.9</span>
           <div class="rating">
@@ -93,6 +89,7 @@
             <div class="rating-text">Instructor Rating</div>
           </div>
         </div>
+
         <div class="resume-card">
           <div class="icon">
             <img src="/assets/mask.png" alt="" />
@@ -106,6 +103,7 @@
       </div>
     </section>
 
+    <!-- ===== SECTION 2 ===== -->
     <section class="section-2">
       <div class="tag">What You Get</div>
       <h2 class="h2">
@@ -153,6 +151,8 @@
     </section>
 
     <div class="overlay" id="overlay"></div>
+
+    <!-- ===== SCRIPT ===== -->
     <script>
       const menuIcon = document.getElementById("menu-icon");
       const sidebar = document.getElementById("sidebar");
@@ -160,11 +160,12 @@
       const logo = document.getElementById("logo");
       const overlay = document.getElementById("overlay");
       const nav = document.getElementById("nav");
+
       menuIcon.addEventListener("click", () => {
         sidebar.classList.add("active");
         logo.style.display = "none";
         overlay.classList.add("active");
-        nav.style.marginTop='-70px'
+        nav.style.marginTop = "-70px";
       });
 
       closeIcon.addEventListener("click", () => {
@@ -173,10 +174,11 @@
         overlay.classList.remove("active");
         nav.style.marginTop = "0";
       });
+
       overlay.addEventListener("click", () => {
         sidebar.classList.remove("active");
         overlay.classList.remove("active");
-        nav.style.marginTop ="0"
+        nav.style.marginTop = "0";
       });
     </script>
   </body>
