@@ -454,8 +454,7 @@ h2 span {
   visibility: visible;
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 1064px) {
   /* Hero Section */
   .hero {
     flex-direction: column;
@@ -593,6 +592,65 @@ h2 span {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+  .sidebar {
+    display: block;
+  }
+  .nav-links,
+  .quote-button {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding: 15px 25px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .h2 {
+    font-size: 26px;
+  }
+  .card img {
+    max-width: 200px;
+  }
+}
+/* -------- Responsive (Mobile only) -------- */
+@media (max-width: 460px) {
+  .btn-outline {
+    width: 202px;
+  }
+  .btn-primary {
+    width: 153px;
+  }
+  .h2 {
+    font-size: 27px;
+    line-height: 40px;
+  }
+  .tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+  .card {
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+}
 /* =========== Responsive  375px ============*/
 
 @media (max-width: 375px) {
@@ -629,62 +687,10 @@ h2 span {
   }
 }
 
-/* -------- Responsive (Mobile only) -------- */
-@media (max-width: 460px) {
-  .btn-outline {
-    width: 202px;
-  }
-  .btn-primary {
-    width: 153px;
-  }
-  .h2 {
-    font-size: 27px;
-    line-height: 40px;
-  }
-  .tag {
-    font-size: 12px;
-    padding: 4px 10px;
-  }
-  .card {
-    padding: 40px 24px;
+/* @media ((min-width: 1068) and (max-width:1200)) {
+  .hero {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: nowrap;
   }
-  .card h3 {
-    font-size: 16px;
-  }
-  .card p {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) {
-  .navbar {
-    height: 70px;
-  }
-  .sidebar {
-    display: block;
-  }
-  .nav-links,
-  .quote-button {
-    display: none;
-  }
+} */
 
-  .menu-icon {
-    display: block;
-  }
-
-  .navbar {
-    padding: 15px 25px;
-  }
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .h2 {
-    font-size: 26px;
-  }
-  .card img {
-    max-width: 200px;
-  }
-}
